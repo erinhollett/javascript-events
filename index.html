@@ -15,6 +15,7 @@
   <div id="clickMessage" style="display: none">
     <p>Thanks for petting me!</p>
   </div>
+
   <!-- Keyboard Events --->
   <label for="petName">Name your pet:</label>
   <input type="text" id="petName" placeholder="Milo">
@@ -24,13 +25,18 @@
   <!-- Form Events --->
   <p>Submit your adoption form: </p>
   <form id="myForm">
+
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
+    <p id="nameFeedback" class="input-feedback"></p>
 
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>
+    <p id="emailFeedback" class="input-feedback"></p>
+    
     <button type="submit">Submit</button>
   </form>
+  <div id="messageContainer"></div>
 
   <!-- Event Delegation --->
   <p id="toyMessage">Click a toy to give it to your pet!</p>
