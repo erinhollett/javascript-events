@@ -59,3 +59,13 @@ emailInput.addEventListener('focus', () => {
 emailInput.addEventListener('blur', () => {
   emailFeedback.textContent = "";
 });
+
+// === Event Delegation === //
+const list = document.getElementById('toyBox');
+
+list.addEventListener('click', function(event) {
+  if (event.target.tagName === 'LI') {
+      submitMessage.textContent = "You gave: " + input.value + "a " + event.target.textContent;
+      event.target.style.backgroundColor = 'green';
+  }
+});
