@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 7: JavaScript Events</title>
+</head>
+<body>
+
+  <h1>Adopt a pet!</h1>
+  <img src="pet.jpg" alt="Stuffed Animal Dog"><br>
+
+  <!-- Mouse Events --->
+  <button type="button">Hover here to pet me!</button>
+  <div id="hoverMessage" style="display: none">
+    <p>Thanks for the pets!</p>
+  </div>
+
+  <!-- Keyboard Events --->
+  <label for="petName">Name your pet:</label>
+  <input type="text" id="petName" placeholder="Milo">
+  <button type="button" id="refresh">Start Over</button>
+  <p id="showName">You're naming your pet: </p>
+
+  <!-- Form Events --->
+  <p>Submit your adoption form: </p>
+  <form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Event Delegation --->
+  <p id="toyMessage">Click a toy to give it to your pet!</p>
+  <div id="toyBox">
+    <button>Ball</button>
+    <button>Bone</button>
+    <button>Chew Toy</button>
+  </div>
+
+</body>
+</html>
