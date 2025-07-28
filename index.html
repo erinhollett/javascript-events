@@ -3,27 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <title>Lab 7: JavaScript Events</title>
 </head>
 <body>
 
   <h1>Adopt a pet!</h1>
-  <img src="pet.jpg" alt="Stuffed Animal Dog"><br>
 
-  <!-- Mouse Events --->
-  <button type="button" id="clickButton">Pet me!</button>
-  <div id="clickMessage" style="display: none">
-    <p>Thanks for petting me!</p>
+  <section id="petArea">
+  <div id="petWrapper">
+    <img src="pet.jpg" alt="Stuffed Animal Dog" id="petImage">
+    <div id="clickMessage"><p>Thanks for petting me!</p></div>
   </div>
-
+  <!-- Mouse Events --->
+  <button type="button" id="clickButton">Pet me!</button><br>
+  </section>
+  
   <!-- Keyboard Events --->
-  <label for="petName">Name your pet:</label>
-  <input type="text" id="petName" placeholder="Milo">
-  <button type="button" id="refresh">Clear</button>
-  <p id="showName">You're naming your pet: </p>
+  <section id="nameInputArea">
+    <label for="petName">Name your pet:</label>
+    <input type="text" id="petName" placeholder="Milo">
+    <button type="button" id="refresh">Clear</button>
+    <p id="showName">You're naming your pet: </p>
+  </section>
 
   <!-- Form Events --->
   <p>Submit your adoption form: </p>
+  <section id="formArea">
   <form id="myForm">
 
     <label for="name">Name:</label>
@@ -37,15 +45,18 @@
     <button type="submit">Submit</button>
   </form>
   <div id="messageContainer"></div>
+  </section>
 
   <!-- Event Delegation --->
-  <p id="toyMessage">Click a toy to give it to your pet!</p>
-  <ul id="toyBox">
-    <li>Ball</li>
-    <li>Bone</li>
-    <li>Chew Toy</li>
-  </ul>
-  <div id="selectMessage"></div>
+  <section id="toyArea">
+    <p id="toyMessage">Click a toy to give it to your pet!</p>
+    <ul id="toyBox">
+      <li>Ball</li>
+      <li>Bone</li>
+      <li>Chew Toy</li>
+    </ul>
+    <div id="selectMessage"></div>
+  </section>
 
   <script src="script.js"></script> 
 
