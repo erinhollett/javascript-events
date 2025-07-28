@@ -31,11 +31,14 @@ function getPetName() {
 
 output.textContent = "You're naming your pet: " + getPetName();
 
-document.addEventListener('keypress', function(event) {
+function placePetName(event) {
   setTimeout(() => {
     output.textContent = "You're naming your pet: " + getPetName();
-  }, 0);
-});
+  }, 1); // Adding a 1sec delay fixed the ability to use backspace to delete text
+}
+
+document.addEventListener('keypress', placePetName);
+document.addEventListener('keydown', placePetName);
 
 document.getElementById('refresh').addEventListener('click', function() {
   input.value = '';
@@ -69,7 +72,7 @@ nameInput.addEventListener('blur', () => {
 });
 
 emailInput.addEventListener('focus', () => {
-  emailFeedback.textContent = "We won't share your email.";
+  emailFeedback.textContent = "Please enter your email.";
 });
 emailInput.addEventListener('blur', () => {
   emailFeedback.textContent = "";
@@ -80,7 +83,7 @@ const list = document.getElementById('toyBox');
 
 list.addEventListener('click', function(event) {
   if (event.target.tagName === 'LI') {
-      submitMessage.textContent = "You gave: " + getPetName() + " a " + event.target.textContent;
-      event.target.style.backgroundColor = 'green';
+      selectMessage.textContent = "You gave: " + getPetName() + " a " + event.target.textContent;
+      event.target.classList.add('selected');
   }
 });
